@@ -51,6 +51,13 @@ The following commands will help create a docker image, build the app and run it
  - **Total Count** - Total number of view actions. Ensure this number is exactly divisible by **Batch Count** for optimal resource utilisation.
  - **View Duration** - Average duration in seconds of a single view in view action. Actual view duration will be +/- 16.6% of this number.
 
-You may choose to alter the above params in `utils/constants/index.js` for fine tuning according to your needs. 
+Also, the above commands runs 5 docker containers in parallel (which will translate to 5 x **Batch Count** number of Chromium instances running simultaneously)
+Adjust this according to how capable your system is.
 
-Also, the above commands runs 5 docker containers in parallel (which will translate to 5 x **Batch Count** number of Chromium instances running simultaneously) . Adjust this according to how capable your system is.
+
+
+### Blocking and rm Views:
+
+- https://github.com/soumyadityac/youtube-viewer/issues/24#issuecomment-1416812195
+
+
